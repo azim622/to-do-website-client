@@ -4,8 +4,8 @@
 A feature-rich **Task Management Application** built with **MERN Stack** that allows users to add, edit, delete, and organize tasks efficiently. It includes authentication, drag-and-drop task management, and real-time updates.
 
 ## 🔗 Live Links
-- **Frontend Deployment**: [Your Frontend URL](#)
-- **Backend API**: [Your Backend URL](#)
+- **Frontend Deployment**:  https://to-do-website-b24d0.web.app
+- **Backend API**: http://https://to-do-website-server.vercel.app
 
 ## 🛠️ Dependencies
 ### **Frontend Dependencies**
@@ -36,7 +36,7 @@ A feature-rich **Task Management Application** built with **MERN Stack** that al
 ### **Frontend Setup**
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/task-manager.git
+   git clone https://github.com/fazle622/task-manager.git
    cd task-manager
    ```
 2. Install dependencies:
@@ -83,8 +83,7 @@ A feature-rich **Task Management Application** built with **MERN Stack** that al
 
 ## 📞 Contact
 If you have any questions, feel free to reach out:
-- **GitHub**: [Your GitHub](https://github.com/your-username)
-- **Email**: your-email@example.com
+- **Email**: fazleazim622@gmail.com
 
 ---
 **Enjoy managing your tasks efficiently! 🚀**

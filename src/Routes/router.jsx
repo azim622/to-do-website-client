@@ -6,6 +6,7 @@ import MainLayOuts from "../LayOut/MainLayOuts";
 import Home from "../Home/Home";
 import PrivateRoute from "../PrivetRoute/PrivetRoute";
 import Dashboard from "../Dashboard/Dashboard";
+import Error from "../Error/Error";
 
 
 const router = createBrowserRouter([
@@ -18,9 +19,12 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+
                 path: "/dashboard",
                 element: (
+                    <PrivateRoute>
                         <Dashboard></Dashboard>
+                    </PrivateRoute>
                 ),
             },
             
@@ -33,6 +37,11 @@ const router = createBrowserRouter([
                 element:<Registration></Registration>
             },
         ],
+
+    },
+    {
+        path: "*",
+        element: <Error></Error>,
     },
     
 ]);

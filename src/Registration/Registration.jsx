@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../Provider/AuthProver"; // Ensure correct file path
 import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth"; // ✅ Import updateProfile from Firebase
 
 const Registration = () => {
   const [name, setName] = useState("");
@@ -8,7 +9,7 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { createNewUser, signInWithGoogle, updateUserProfile } = useContext(AuthContext);
+  const { createNewUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // ✅ Handle Email & Password Registration
@@ -18,7 +19,11 @@ const Registration = () => {
 
     try {
       const userCredential = await createNewUser(email, password);
-      await updateUserProfile(userCredential.user, { displayName: name }); // Update user's name
+      const user = userCredential.user;
+
+      // ✅ Correct usage of updateProfile
+      await updateProfile(user, { displayName: name });
+
       navigate("/dashboard"); // Redirect to Dashboard after successful registration
     } catch (err) {
       setError(err.message);
